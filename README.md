@@ -1,5 +1,8 @@
 #COMP2412-DataStructures-Assignment3
 ## Mariam M
+### I forgot my laptop at co-op with all my local files :'(
+### So I recompiled my code using godbolt.org 
+### Will send my CMAKE zip files as soon as I have them, but in the meantime heres my work
 
 ## 1a
 Big O describes an asymptotic upper bound on an algorithm's growth rate, while Big Theta describes a tight bound. If f(n)∈Θ(g(n)), then f(n) grows at the same asymptotic rate as g(n). A function can belong to a Big O class that is not its tightest class.
