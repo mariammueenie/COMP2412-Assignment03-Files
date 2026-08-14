@@ -1,9 +1,10 @@
-#COMP2412-DataStructures-Assignment3
+# COMP2412-DataStructures-Assignment3
 ## Mariam M
 ## Submission Note
 All assignment questions and C++ implementations were completed by the assignment deadline.
 At the time of submission I didn't have access to my regular development laptop/environment, including Docker/WSL and the CMake environment used for COMP2412. I therefore compiled and tested the individual C++ files using Godbolt Compiler Explorer [ godbolt.com in C++ ] to verify that they run correctly.
 The CMake project files will be added/sent as soon as I regain access to my regular development environment. I'm submitting the completed source code and README now so that the completed work is recorded before the deadline.
+Also- took calc in hs and work as calc tutor, hence calc stuff mentioned.
 
 ## 1a
 Big O describes an asymptotic upper bound on an algorithm's growth rate, while Big Theta describes a tight bound. If f(n)∈Θ(g(n)), then f(n) grows at the same asymptotic rate as g(n). A function can belong to a Big O class that is not its tightest class.
