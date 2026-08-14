@@ -21,14 +21,14 @@ of f(n)=n^2+3n+2 and g(n)=4n^2+2
 = lim as n->inf  n^2+3n+2/4n^2+2 [take every term and divide by n^2]
 (strat to use frm calc to solve limit)
     
-= lim as n->inf   (n^2/n^2)+(3n/n^2)+(2/n^2)/(2n^2/n^2)+(2/4n^2) 
+= lim as n->inf   (n^2/n^2)+(3n/n^2)+(2/n^2)/(2n^2/n^2)+(2/n^2) 
 (any fraction where degree on bottom is larger than degree on top is equal to essentially 0)
 
 = lim as n->inf   (1)+(0)+(0)/(4)+(0)
 = lim as n->inf   (1)/(4)
 = (1)/(4)
 
-So the limit n->inf of f(n)/g(n) is 1/4 (ie: a + constant)
+So the limit n->inf of f(n)/g(n) is 1/4 (ie: a pos constant)
 
 Therefore they are both quadratic, f(n) is in big theta of g(n), and have the same order of growth.
 
@@ -43,10 +43,10 @@ We know that a function with a fixed degree will grow much slower than an expone
 This means that f(n) will be bigger than g(n), when n is a decently large number. 
 
 Therefore
-=lim as x->inf of f(n)/g(n)
+=lim as n->inf of f(n)/g(n)
 (think of what happens to f(n) as n becomes extremely large, and as g(n) becomes extremely large. f(n) will be larger past the point where the 2 functions intersect, therefore the number on the top of the fraction will be bigger) 
-=lim as x->inf of big#/smaller#
-=lim as x->inf is inf, because bigger number divided by smaller number will always get larger and larger.
+=lim as n->inf of big#/smaller#
+=lim as n->inf is inf, because bigger number divided by smaller number will always get larger and larger.
 
 Therefore f(n) grows faster than g(n), so f(n) is in Big Omega of g(n). Similarly, g(n) is in Big O of f(n).
 
@@ -74,7 +74,7 @@ f(n)=n! and g(n)=2^n
 and 
 =lim as x->inf of f(n)/g(n)
 =lim as x->inf of n!/2^n
-(since factorials have faster growth rate than exponential func, fraction will always be bigger number over smaller number, therefore, quotient will always be getting bigger and bigger)
+(since factorials have faster growth rate than exponential func, fraction eventually grows faster than exponential growth when n gets infinitely bigger)
 = lim as x->inf is inf 
  
 Therefore f(n) is in omega with g(n), or similarly, g(n) is in big O with f(n)
