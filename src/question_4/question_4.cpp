@@ -9,7 +9,7 @@
 class Graph {
 private:
 
-    // a through j is enough for all graphs
+    // a through j is good for for graphs
     std::vector<std::vector<char>> adjacency;
 
 
@@ -25,7 +25,7 @@ public:
     }
 
 
-    // For graphs I, II and III
+    // For graphs i, ii and iii
     void addUndirectedEdge(
         char a,
         char b
@@ -50,8 +50,7 @@ public:
     }
 
 
-    // Use alphabetical neighbour order
-    // so traversal result is predictable
+    // Use alphabetical neighbour order so traversal result is predictable
     void sortAdjacency() {
 
         for (std::vector<char>& list
@@ -89,10 +88,7 @@ public:
 
 
     // DFS using stack
-    //
-    // Push neighbours in reverse alphabetical order
-    // because stack is LIFO, so smallest letter
-    // ends up being popped first
+    // Push neighbours in reverse alphabetical order since  stack is LIFO, so smallest letter ends up being popped first
     void DFS(char start) const {
 
         std::stack<char> s;
@@ -109,8 +105,7 @@ public:
 
             s.pop();
 
-            // Vertex may already have been placed
-            // in stack from another path
+            // Vertex may already have been placed in stack from another path
             if (visited[index(current)]) {
                 continue;
             }
@@ -118,7 +113,7 @@ public:
             visited[index(current)] =
                 true;
 
-            // This is the pop/visit sequence
+            // This is pop/visit sequence
             std::cout
                 << current
                 << " ";
@@ -143,8 +138,7 @@ public:
     }
 
 
-    // BFS uses queue
-    // print each vertex when dequeued
+    // BFS uses queue print each vertex when dequeued
     void BFS(char start) const {
 
         std::queue<char> q;
@@ -219,9 +213,7 @@ void runGraph(
 int main() {
 
 
-    // ==================================================
-    // GRAPH I
-    // ==================================================
+// GRAPH I
 
     Graph g1;
 
@@ -258,9 +250,8 @@ int main() {
 
 
 
-    // ==================================================
-    // GRAPH II
-    // ==================================================
+  
+// GRAPH II
 
     Graph g2;
 
@@ -294,10 +285,7 @@ int main() {
     );
 
 
-
-    // ==================================================
-    // GRAPH III
-    // ==================================================
+// GRAPH III
 
     Graph g3;
 
@@ -328,14 +316,9 @@ int main() {
 
 
 
-    // ==================================================
-    // GRAPH IV
-    // ==================================================
+// GRAPH IV
 
-    // Graph IV is directed.
-    //
-    // Weights on diagram are not needed for DFS/BFS.
-    // We only care which direction each arrow goes.
+    // Graph IV is directed, weights on diagram not needed for DFS/BFS, only care which direction each arrow goes
 
     Graph g4;
 
