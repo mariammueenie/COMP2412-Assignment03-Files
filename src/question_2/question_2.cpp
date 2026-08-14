@@ -120,7 +120,7 @@ void printFirst(const std::vector<int>& values, int amount) {
 }
 
 
-// Check result really is in ascending order
+// Check result in ascending order
 bool isSorted(const std::vector<int>& values) {
     for (int i = 1;
          i < static_cast<int>(values.size());
@@ -142,7 +142,7 @@ int main() {
 
     std::srand(std::time(nullptr));
 
-    // Assignment asks for array of 1000 random vals
+    // Aarray of 1000 random vals
     for (int i = 0; i < SIZE; i++) {
         numbers.push_back(std::rand() % 10000);
     }
@@ -157,7 +157,7 @@ int main() {
 
     MinHeap heap;
 
-    // Add all 1000 nums to min heap
+    // Add 1000 nums to min heap
     for (int value : numbers) {
         heap.insert(value);
     }
@@ -167,7 +167,7 @@ int main() {
               << heap.getMin()
               << "\n";
 
-    // extractMin repeatedly gives us vals smallest -> largest
+    // extractMin repeatedly gives vals smallest -> largest
     std::vector<int> sorted;
 
     while (!heap.empty()) {
