@@ -23,13 +23,9 @@ private:
     const int MIN_CAPACITY = 4;
 
 
-    // Custom hash function
-    //
-    // Assignment keys are strings, so turn string into a
-    // simple numeric key by adding its character values.
-    //
-    // Then use modulo:
-    // hash = numericKey mod tableSize
+    // Custom hash func
+    // Assignment keys = strings, so turn string into numeric key by adding  character vals
+    // Then use modulo: hash = numericKey mod tableSize
     int hashFunction(
         const std::string& key,
         int tableSize
@@ -53,7 +49,7 @@ private:
     }
 
 
-    // Change table size and rehash everything
+    // Change table size, rehash everything
     void resize(int newCapacity) {
         if (newCapacity < MIN_CAPACITY) {
             newCapacity = MIN_CAPACITY;
@@ -69,7 +65,7 @@ private:
             newTable[i] = nullptr;
         }
 
-        // Move every old node into its NEW hash slot
+        // Move all old node into NEW hash slot
         for (int i = 0;
              i < capacity;
              i++) {
@@ -78,7 +74,7 @@ private:
 
             while (current != nullptr) {
 
-                // Save next old node before changing pointer
+                // Save old node before changing pointer
                 Node* nextNode =
                     current->next;
 
@@ -151,7 +147,7 @@ public:
     }
 
 
-    // Insert a key/value pair
+    // Insert key/value pair
     void insert(
         const std::string& key,
         int value
@@ -188,14 +184,14 @@ public:
 
         numItems++;
 
-        // Assignment says double if load > 0.75
+        // double if load > 0.75
         if (loadFactor() > 0.75) {
             resize(capacity * 2);
         }
     }
 
 
-    // Search only linked list for hash(key)
+    // Search only linked list for hash
     bool search(
         const std::string& key,
         int& value
@@ -225,7 +221,7 @@ public:
     }
 
 
-    // "delete" is a C++ keyword
+    // "delete" is C++ keyword
     // so named function removeKey instead
     bool removeKey(
         const std::string& key
@@ -244,14 +240,14 @@ public:
 
             if (current->key == key) {
 
-                // Node is first in chain
+                // Node first in chain
                 if (previous == nullptr) {
 
                     table[index] =
                         current->next;
                 }
 
-                // Node is somewhere after first
+                // Node somewhere after first
                 else {
 
                     previous->next =
@@ -262,7 +258,7 @@ public:
 
                 numItems--;
 
-                // Assignment says halve when load < 0.25
+                // half when load < 0.25
                 while (
                     capacity > MIN_CAPACITY
                     && loadFactor() < 0.25
@@ -282,7 +278,7 @@ public:
     }
 
 
-    // Show every slot + its linked list
+    // Show all slots + linked list
     void display() const {
 
         std::cout
@@ -327,7 +323,7 @@ int main() {
 
     HashTable ht;
 
-    // Exact input sequence from assignment
+    // input sequence 
     ht.insert("Toyota", 300);
     ht.insert("Ford", 450);
     ht.insert("BMW", 400);
@@ -373,7 +369,7 @@ int main() {
     ht.display();
 
 
-    // Delete enough vals to show shrink is actually working
+    // Delete enough vals to show shrink working
     std::cout
         << "\nDeleting more values to test shrinking...\n";
 
